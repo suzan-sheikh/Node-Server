@@ -6,8 +6,8 @@ const server: Server = createServer(
     const method = req.method;
 
     if (url === "/" && method === "GET") {
-      res.writeHead(200, { "content-type": "text/plain" });
-      res.end("this is route route");
+      res.writeHead(200, { "content-type": "application/json" });
+      res.end(JSON.stringify({message: "this is route route"}));
     } else {
       res.writeHead(404, { "content-type": "text/plain" });
       res.end("route not found");
