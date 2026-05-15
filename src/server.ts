@@ -2,7 +2,18 @@ import { createServer, IncomingMessage, Server, ServerResponse } from "http";
 
 const server: Server = createServer(
   (req: IncomingMessage, res: ServerResponse) => {
-    console.log(req);
+    const url = req.url;
+    const method = req.method;
+
+    if(url === '/' && method === "GET"){
+      console.log("this is root rout");
+    }
+
+
+
+
+
+
   },
 );
 
