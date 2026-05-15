@@ -6,7 +6,8 @@ const server: Server = createServer(
     const method = req.method;
 
     if(url === '/' && method === "GET"){
-      console.log("this is root rout");
+      res.writeHead(200, {"content-type" : "text/plain"})
+      res.end("this is route route")
     }
 
 
